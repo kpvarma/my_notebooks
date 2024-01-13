@@ -1,9 +1,10 @@
 version: '3'
 services:
   jupyterlab:
-    image: jupyterlab-tensors:latest
+    image: my_notebooks:latest
+    container_name: jupyterlab
     ports:
-      - "8889:8888"
+      - "8888:8888"
     volumes:
       - ./notebooks:/home/jovyan/work
     environment:
